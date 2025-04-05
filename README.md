@@ -50,13 +50,16 @@ Este projeto tem como objetivo desenvolver uma API RESTful simples utilizando **
 ```
 A API estará disponível em: http://localhost:5000
 
-🔁 Endpoints da API
-Método 	Muito 	Descrição
-PEGAR 	/dados	Retorna todos os registros
-PEGAR 	/dados/<id>	Retorna um registro específico
-PUBLICAR 	/dados	Cria um novo registro
-COLOCAR 	/dados/<id>	Atualiza um registro existente
-EXCLUIR 	/dados/<id>	Remove um registro 
+## 🔁 Endpoints da API
+
+| Método   | Rota           | Descrição                       |
+|----------|----------------|----------------------------------|
+| GET      | `/dados`       | Retorna todos os registros       |
+| GET      | `/dados/<id>`  | Retorna um registro específico   |
+| POST     | `/dados`       | Cria um novo registro            |
+| PUT      | `/dados/<id>`  | Atualiza um registro existente   |
+| DELETE   | `/dados/<id>`  | Remove um registro               |
+
 
 ## 📬 Contato
 
