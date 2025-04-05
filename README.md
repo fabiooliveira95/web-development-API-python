@@ -45,10 +45,10 @@ Este projeto tem como objetivo desenvolver uma API RESTful simples utilizando **
    pip install flask
 ```
 4.Execute a aplicação:
+
 ```bash
    python app.py
 ```
-A API estará disponível em: http://localhost:5000
 
 ## 🔁 Endpoints da API
 
