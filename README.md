@@ -1,33 +1,65 @@
-desevolvimento de APIs em python
+# 🌐 Web Development API em Python
 
-esse codigo cria uma aplicacao web simples utilizando framework FLASK. vamos pois bem
+Este projeto tem como objetivo desenvolver uma API RESTful simples utilizando **Python** e o framework **Flask**. A aplicação simula operações básicas de uma API para manipulação de dados via requisições HTTP.
 
-    FAZENDO UMA IMPORTACAO
+---
 
-Flask, request, e jsonify: são importados da biblioteca Flask: Flask: usado para criar a aplicação web. request: permite acessar dados enviados em uma requisição HTTP (como corpo, cabeçalhos, etc.). jsonify: formata uma resposta no formato JSON.
+## 🚀 Funcionalidades
 
-    FAZENDO UMA APLICACAO FLASK
+- ✅ Criar dados via `POST`
+- 📄 Listar todos os dados com `GET`
+- 🔍 Buscar dados por ID com `GET`
+- ✏️ Atualizar dados com `PUT`
+- ❌ Remover dados com `DELETE`
 
-app = Flask(name): Cria uma instância da aplicação Flask.
+---
 
-    SIMULANDO UM BANCO DE DADOS banco_de_dados = {}: Um dicionário Python simples é usado como um "banco de dados" para armazenar dados temporários. Ele é inicializado como vazio.
+## 🛠️ Tecnologias Utilizadas
 
-    FAZENDO UMA ROTA (GET)
+- Python 3.11
+- Flask
+- JSON (como formato de entrada/saída)
+- Postman (para testes de endpoints)
 
-@app.route("/"): Define uma rota para a URL raiz (/). def hello_world(): Quando um cliente acessa a raiz da aplicação, a função hello_world é chamada, e a resposta retornada é uma mensagem HTML simples com o texto "hello, world".
+---
 
-5.FAZENDO UMA ROTA PARA ADICIONAR O METODO (POST)
+## 📦 Instalação e Execução
 
-@app.route('/adicionar_dados', methods=['POST']): Define uma rota para a URL /adicionar_dados, que aceita apenas requisições do tipo POST. def adicionar_dados(): Essa função:
+1. Clone o repositório:
 
-Obtém os dados enviados no corpo da requisição, que devem estar no formato JSON.
-Verifica se os campos 'chave' e 'valor' estão presentes no JSON recebido.
-Se estiverem presentes, armazena esses dados no dicionário banco_de_dados usando a 'chave' como chave do dicionário e o 'valor' como o valor correspondente.
-Se a operação for bem-sucedida, retorna uma mensagem JSON confirmando que os dados foram adicionados.
-Se faltar algum dos campos esperados, retorna uma mensagem de erro com o código de status HTTP 400 (erro de requisição).
+```bash
+   git clone https://github.com/fabiooliveira95/web-development-API-python.git
+```
 
-6.FAZENDO UMA EXECUCAO DA APLICACAO
+```bash
+   cd web-development-API-python
+```
 
-if name == 'main':: Verifica se o script está sendo executado diretamente. app.run(debug=True): Inicia o servidor Flask em modo de depuração, facilitando a detecção de erros durante o desenvolvimento.
+2.(Recomendada) Crie um ambiente virtual:
+```bash
+   python -m venv venv
+   source venv/bin/activate  # No Windows use: venv\Scripts\activate
+```
+3.Instale as dependências: 
+```bash
+   pip install flask
+```
+4.Execute a aplicação:
+```bash
+   python app.py
+```
+A API estará disponível em: http://localhost:5000
 
-"UM BREVE RESUMO" A aplicação possui duas rotas: uma que responde com "hello, world" e outra que permite adicionar dados (chave-valor) a um dicionário em memória usando um pedido POST com dados no formato JSON.
+🔁 Endpoints da API
+Método 	Muito 	Descrição
+PEGAR 	/dados	Retorna todos os registros
+PEGAR 	/dados/<id>	Retorna um registro específico
+PUBLICAR 	/dados	Cria um novo registro
+COLOCAR 	/dados/<id>	Atualiza um registro existente
+EXCLUIR 	/dados/<id>	Remove um registro 
+
+## 📬 Contato
+
+Fábio Oliveira
+🔗 [LinkedIn](https://www.linkedin.com/in/fabio-oliveira-araujo-cientista/)
+📧 fabiooliveira0067@gmail.com
